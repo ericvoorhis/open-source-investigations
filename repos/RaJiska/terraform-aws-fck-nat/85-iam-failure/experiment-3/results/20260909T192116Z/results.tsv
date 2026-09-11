@@ -1,0 +1,2 @@
+trial	account_id	region	slr_before	slr_created_at	slr_role_id	profile_created_at	name	apply_exit	asg_created_at	first_activity_at	first_activity_status	recovery_at	activity_count	failed_activity_count	first_activity_message
+1	427762493065	us-west-2	2026-09-09T19:21:21+00:00	2026-09-09T19:21:21+00:00	AROAWHGFBU2EW4HJN5OZQ	2026-09-09T19:26:34+00:00	fck-nat-exp-1788981981-1	0	2026-09-09T19:26:48.130000+00:00	2026-09-09T19:26:52.757000+00:00	Successful	-	1	0	None
