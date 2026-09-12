@@ -1,0 +1,446 @@
+[0m[1mmodule.fck_nat.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.fck_nat.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.fck_nat.data.aws_vpc.main: Reading...[0m[0m
+[0m[1mmodule.fck_nat.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.fck_nat.data.aws_default_tags.current: Reading...[0m[0m
+[0m[1mmodule.fck_nat.data.aws_ami.main[0]: Reading...[0m[0m
+[0m[1mmodule.fck_nat.data.aws_default_tags.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.fck_nat.data.aws_region.current: Read complete after 0s [id=us-west-2][0m
+[0m[1mmodule.fck_nat.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.fck_nat.data.aws_iam_policy_document.instance_assume_role_policy: Reading...[0m[0m
+[0m[1mmodule.fck_nat.data.aws_iam_policy_document.instance_assume_role_policy: Read complete after 0s [id=2851119427][0m
+[0m[1mmodule.fck_nat.aws_iam_role.main: Refreshing state... [id=fck-nat-exp-1789090055-6][0m
+[0m[1mmodule.fck_nat.data.aws_caller_identity.current: Read complete after 0s [id=711318977523][0m
+[0m[1mmodule.fck_nat.data.aws_iam_policy_document.main: Reading...[0m[0m
+[0m[1mmodule.fck_nat.data.aws_iam_policy_document.main: Read complete after 0s [id=1811736922][0m
+[0m[1mmodule.fck_nat.aws_iam_policy.main: Refreshing state... [id=arn:aws:iam::711318977523:policy/fck-nat-exp-1789090055-6][0m
+[0m[1mmodule.fck_nat.aws_iam_role_policy_attachment.main: Refreshing state... [id=fck-nat-exp-1789090055-6/arn:aws:iam::711318977523:policy/fck-nat-exp-1789090055-6][0m
+[0m[1mmodule.fck_nat.aws_iam_instance_profile.main: Refreshing state... [id=fck-nat-exp-1789090055-6][0m
+[0m[1mmodule.fck_nat.data.aws_ami.main[0]: Read complete after 0s [id=ami-0d1db1251d2b64626][0m
+[0m[1mmodule.fck_nat.data.aws_vpc.main: Read complete after 1s [id=vpc-07edef14b92b9d6bf][0m
+[0m[1mmodule.fck_nat.aws_security_group.main: Refreshing state... [id=sg-09acbcdd1389aaeb3][0m
+[0m[1mmodule.fck_nat.aws_network_interface.main: Refreshing state... [id=eni-0835308fc9aeaeb37][0m
+[0m[1mmodule.fck_nat.data.cloudinit_config.this: Reading...[0m[0m
+[0m[1mmodule.fck_nat.data.cloudinit_config.this: Read complete after 0s [id=1711896985][0m
+[0m[1mmodule.fck_nat.aws_launch_template.main: Refreshing state... [id=lt-0a4ddb92fd5384510][0m
+[0m[1mmodule.fck_nat.aws_autoscaling_group.main[0]: Refreshing state... [id=fck-nat-exp-1789090055-6][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.fck_nat.aws_autoscaling_group.main[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_autoscaling_group" "main" {
+      [31m-[0m[0m arn                              = "arn:aws:autoscaling:us-west-2:711318977523:autoScalingGroup:c29e0d1b-4266-4318-88b5-ab34f05941ce:autoScalingGroupName/fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zones               = [
+          [31m-[0m[0m "us-west-2c",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m capacity_rebalance               = false [90m-> null[0m[0m
+      [31m-[0m[0m default_cooldown                 = 300 [90m-> null[0m[0m
+      [31m-[0m[0m default_instance_warmup          = 0 [90m-> null[0m[0m
+      [31m-[0m[0m desired_capacity                 = 1 [90m-> null[0m[0m
+      [31m-[0m[0m enabled_metrics                  = [
+          [31m-[0m[0m "GroupAndWarmPoolDesiredCapacity",
+          [31m-[0m[0m "GroupAndWarmPoolTotalCapacity",
+          [31m-[0m[0m "GroupDesiredCapacity",
+          [31m-[0m[0m "GroupInServiceCapacity",
+          [31m-[0m[0m "GroupInServiceInstances",
+          [31m-[0m[0m "GroupMaxSize",
+          [31m-[0m[0m "GroupMinSize",
+          [31m-[0m[0m "GroupPendingCapacity",
+          [31m-[0m[0m "GroupPendingInstances",
+          [31m-[0m[0m "GroupStandbyCapacity",
+          [31m-[0m[0m "GroupStandbyInstances",
+          [31m-[0m[0m "GroupTerminatingCapacity",
+          [31m-[0m[0m "GroupTerminatingInstances",
+          [31m-[0m[0m "GroupTotalCapacity",
+          [31m-[0m[0m "GroupTotalInstances",
+          [31m-[0m[0m "WarmPoolDesiredCapacity",
+          [31m-[0m[0m "WarmPoolPendingCapacity",
+          [31m-[0m[0m "WarmPoolTerminatingCapacity",
+          [31m-[0m[0m "WarmPoolTotalCapacity",
+          [31m-[0m[0m "WarmPoolWarmedCapacity",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m force_delete                     = false [90m-> null[0m[0m
+      [31m-[0m[0m force_delete_warm_pool           = false [90m-> null[0m[0m
+      [31m-[0m[0m health_check_grace_period        = 300 [90m-> null[0m[0m
+      [31m-[0m[0m health_check_type                = "EC2" [90m-> null[0m[0m
+      [31m-[0m[0m id                               = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m ignore_failed_scaling_activities = true [90m-> null[0m[0m
+      [31m-[0m[0m load_balancers                   = [] [90m-> null[0m[0m
+      [31m-[0m[0m max_instance_lifetime            = 0 [90m-> null[0m[0m
+      [31m-[0m[0m max_size                         = 1 [90m-> null[0m[0m
+      [31m-[0m[0m metrics_granularity              = "1Minute" [90m-> null[0m[0m
+      [31m-[0m[0m min_size                         = 1 [90m-> null[0m[0m
+      [31m-[0m[0m name                             = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m predicted_capacity               = 0 [90m-> null[0m[0m
+      [31m-[0m[0m protect_from_scale_in            = false [90m-> null[0m[0m
+      [31m-[0m[0m region                           = "us-west-2" [90m-> null[0m[0m
+      [31m-[0m[0m service_linked_role_arn          = "arn:aws:iam::711318977523:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling" [90m-> null[0m[0m
+      [31m-[0m[0m suspended_processes              = [] [90m-> null[0m[0m
+      [31m-[0m[0m target_group_arns                = [] [90m-> null[0m[0m
+      [31m-[0m[0m termination_policies             = [] [90m-> null[0m[0m
+      [31m-[0m[0m vpc_zone_identifier              = [
+          [31m-[0m[0m "subnet-09243b9701e480665",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m wait_for_capacity_timeout        = "5m" [90m-> null[0m[0m
+      [31m-[0m[0m warm_pool_size                   = 0 [90m-> null[0m[0m
+        [90m# (5 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m availability_zone_distribution {
+          [31m-[0m[0m capacity_distribution_strategy = "balanced-best-effort" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m capacity_reservation_specification {
+          [31m-[0m[0m capacity_reservation_preference = "default" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m instance_lifecycle_policy {
+          [31m-[0m[0m retention_triggers {
+              [31m-[0m[0m terminate_hook_abandon = "terminate" [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m mixed_instances_policy {
+          [31m-[0m[0m instances_distribution {
+              [31m-[0m[0m on_demand_allocation_strategy            = "prioritized" [90m-> null[0m[0m
+              [31m-[0m[0m on_demand_base_capacity                  = 0 [90m-> null[0m[0m
+              [31m-[0m[0m on_demand_percentage_above_base_capacity = 100 [90m-> null[0m[0m
+              [31m-[0m[0m spot_allocation_strategy                 = "price-capacity-optimized" [90m-> null[0m[0m
+              [31m-[0m[0m spot_instance_pools                      = 0 [90m-> null[0m[0m
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+          [31m-[0m[0m launch_template {
+              [31m-[0m[0m launch_template_specification {
+                  [31m-[0m[0m launch_template_id   = "lt-0a4ddb92fd5384510" [90m-> null[0m[0m
+                  [31m-[0m[0m launch_template_name = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+                  [31m-[0m[0m version              = "1" [90m-> null[0m[0m
+                }
+              [31m-[0m[0m override {
+                  [31m-[0m[0m instance_type     = "t4g.nano" [90m-> null[0m[0m
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+            }
+        }
+
+      [31m-[0m[0m timeouts {
+          [31m-[0m[0m delete = "15m" [90m-> null[0m[0m
+        }
+    }
+
+[1m  # module.fck_nat.aws_iam_instance_profile.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_iam_instance_profile" "main" {
+      [31m-[0m[0m arn         = "arn:aws:iam::711318977523:instance-profile/fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m create_date = "2026-09-11T01:27:41Z" [90m-> null[0m[0m
+      [31m-[0m[0m id          = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m name        = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m path        = "/" [90m-> null[0m[0m
+      [31m-[0m[0m role        = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m tags        = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all    = {} [90m-> null[0m[0m
+      [31m-[0m[0m unique_id   = "AIPA2LHPKHPZTW5XW456G" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.fck_nat.aws_iam_policy.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_iam_policy" "main" {
+      [31m-[0m[0m arn              = "arn:aws:iam::711318977523:policy/fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m attachment_count = 1 [90m-> null[0m[0m
+      [31m-[0m[0m id               = "arn:aws:iam::711318977523:policy/fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m name             = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m path             = "/" [90m-> null[0m[0m
+      [31m-[0m[0m policy           = jsonencode(
+            {
+              [31m-[0m[0m Statement = [
+                  [31m-[0m[0m {
+                      [31m-[0m[0m Action    = [
+                          [31m-[0m[0m "ec2:ModifyNetworkInterfaceAttribute",
+                          [31m-[0m[0m "ec2:AttachNetworkInterface",
+                        ]
+                      [31m-[0m[0m Condition = {
+                          [31m-[0m[0m StringEquals = {
+                              [31m-[0m[0m "ec2:ResourceTag/Name" = "fck-nat-exp-1789090055-6"
+                            }
+                        }
+                      [31m-[0m[0m Effect    = "Allow"
+                      [31m-[0m[0m Resource  = "*"
+                      [31m-[0m[0m Sid       = "ManageNetworkInterface"
+                    },
+                  [31m-[0m[0m {
+                      [31m-[0m[0m Action   = [
+                          [31m-[0m[0m "ssmmessages:OpenDataChannel",
+                          [31m-[0m[0m "ssmmessages:OpenControlChannel",
+                          [31m-[0m[0m "ssmmessages:CreateDataChannel",
+                          [31m-[0m[0m "ssmmessages:CreateControlChannel",
+                          [31m-[0m[0m "ssm:UpdateInstanceInformation",
+                        ]
+                      [31m-[0m[0m Effect   = "Allow"
+                      [31m-[0m[0m Resource = "*"
+                      [31m-[0m[0m Sid      = "SessionManager"
+                    },
+                ]
+              [31m-[0m[0m Version   = "2012-10-17"
+            }
+        ) [90m-> null[0m[0m
+      [31m-[0m[0m policy_id        = "ANPA2LHPKHPZ77ZSG3APR" [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {} [90m-> null[0m[0m
+        [90m# (2 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.fck_nat.aws_iam_role.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_iam_role" "main" {
+      [31m-[0m[0m arn                   = "arn:aws:iam::711318977523:role/fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m assume_role_policy    = jsonencode(
+            {
+              [31m-[0m[0m Statement = [
+                  [31m-[0m[0m {
+                      [31m-[0m[0m Action    = "sts:AssumeRole"
+                      [31m-[0m[0m Effect    = "Allow"
+                      [31m-[0m[0m Principal = {
+                          [31m-[0m[0m Service = "ec2.amazonaws.com"
+                        }
+                    },
+                ]
+              [31m-[0m[0m Version   = "2012-10-17"
+            }
+        ) [90m-> null[0m[0m
+      [31m-[0m[0m create_date           = "2026-09-11T01:27:41Z" [90m-> null[0m[0m
+      [31m-[0m[0m force_detach_policies = false [90m-> null[0m[0m
+      [31m-[0m[0m id                    = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m managed_policy_arns   = [
+          [31m-[0m[0m "arn:aws:iam::711318977523:policy/fck-nat-exp-1789090055-6",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m max_session_duration  = 3600 [90m-> null[0m[0m
+      [31m-[0m[0m name                  = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m path                  = "/" [90m-> null[0m[0m
+      [31m-[0m[0m tags                  = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all              = {} [90m-> null[0m[0m
+      [31m-[0m[0m unique_id             = "AROA2LHPKHPZ4ASN5QMTW" [90m-> null[0m[0m
+        [90m# (3 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.fck_nat.aws_iam_role_policy_attachment.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_iam_role_policy_attachment" "main" {
+      [31m-[0m[0m id         = "fck-nat-exp-1789090055-6/arn:aws:iam::711318977523:policy/fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m policy_arn = "arn:aws:iam::711318977523:policy/fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m role       = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+    }
+
+[1m  # module.fck_nat.aws_launch_template.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_launch_template" "main" {
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-west-2:711318977523:launch-template/lt-0a4ddb92fd5384510" [90m-> null[0m[0m
+      [31m-[0m[0m default_version                      = 1 [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_stop                     = false [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_termination              = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "lt-0a4ddb92fd5384510" [90m-> null[0m[0m
+      [31m-[0m[0m image_id                             = "ami-0d1db1251d2b64626" [90m-> null[0m[0m
+      [31m-[0m[0m instance_type                        = "t4g.nano" [90m-> null[0m[0m
+      [31m-[0m[0m latest_version                       = 1 [90m-> null[0m[0m
+      [31m-[0m[0m name                                 = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m region                               = "us-west-2" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_names                 = [] [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {} [90m-> null[0m[0m
+      [31m-[0m[0m user_data                            = "H4sIAAAAAAAA/4yQT0v7QBBA7wv5DvvL77zdSpDWSAv+6cFDFEQFT2GymSSDyWzYnWr67aUiUigWjzO8Nw/mxrMgi3najZjrYdsLjRDEDjRhfakrv+Uawm6VFnfF5vrh+f726vE1VfvJvGCI5DnXZ7N5ohJlzCGUqJ/bATg2GMyGna+J21wvKpID4CsuOImdTOyw76MLNEqiChrwqPP/n62IbeyUyvVaWxRnG/dmGGTmPDcKXed1ikwl1StkMvNldp7Nl427AASsskWq1ydEGvfiScZ9QIssJTJUPf4Rdk1bjhBgKBkG/M1REcM7OdTfWx0wCgQ5+rAxifoMAAD//yDAmsXAAQAA" [90m-> null[0m[0m
+      [31m-[0m[0m vpc_security_group_ids               = [] [90m-> null[0m[0m
+        [90m# (7 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m block_device_mappings {
+          [31m-[0m[0m device_name  = "/dev/xvda" [90m-> null[0m[0m
+            [90m# (2 unchanged attributes hidden)[0m[0m
+
+          [31m-[0m[0m ebs {
+              [31m-[0m[0m encrypted                  = "true" [90m-> null[0m[0m
+              [31m-[0m[0m iops                       = 0 [90m-> null[0m[0m
+              [31m-[0m[0m throughput                 = 0 [90m-> null[0m[0m
+              [31m-[0m[0m volume_initialization_rate = 0 [90m-> null[0m[0m
+              [31m-[0m[0m volume_size                = 8 [90m-> null[0m[0m
+              [31m-[0m[0m volume_type                = "gp3" [90m-> null[0m[0m
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+        }
+
+      [31m-[0m[0m credit_specification {}
+
+      [31m-[0m[0m iam_instance_profile {
+          [31m-[0m[0m name = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m metadata_options {
+          [31m-[0m[0m http_endpoint               = "enabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_put_response_hop_limit = 0 [90m-> null[0m[0m
+          [31m-[0m[0m http_tokens                 = "required" [90m-> null[0m[0m
+            [90m# (2 unchanged attributes hidden)[0m[0m
+        }
+
+      [31m-[0m[0m network_interfaces {
+          [31m-[0m[0m associate_public_ip_address  = "true" [90m-> null[0m[0m
+          [31m-[0m[0m description                  = "fck-nat-exp-1789090055-6 ephemeral public ENI" [90m-> null[0m[0m
+          [31m-[0m[0m device_index                 = 0 [90m-> null[0m[0m
+          [31m-[0m[0m ena_queue_count              = 0 [90m-> null[0m[0m
+          [31m-[0m[0m ipv4_address_count           = 0 [90m-> null[0m[0m
+          [31m-[0m[0m ipv4_addresses               = [] [90m-> null[0m[0m
+          [31m-[0m[0m ipv4_prefix_count            = 0 [90m-> null[0m[0m
+          [31m-[0m[0m ipv4_prefixes                = [] [90m-> null[0m[0m
+          [31m-[0m[0m ipv6_address_count           = 0 [90m-> null[0m[0m
+          [31m-[0m[0m ipv6_addresses               = [] [90m-> null[0m[0m
+          [31m-[0m[0m ipv6_prefix_count            = 0 [90m-> null[0m[0m
+          [31m-[0m[0m ipv6_prefixes                = [] [90m-> null[0m[0m
+          [31m-[0m[0m network_card_index           = 0 [90m-> null[0m[0m
+          [31m-[0m[0m security_groups              = [
+              [31m-[0m[0m "sg-09acbcdd1389aaeb3",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m subnet_id                    = "subnet-09243b9701e480665" [90m-> null[0m[0m
+            [90m# (6 unchanged attributes hidden)[0m[0m
+        }
+
+      [31m-[0m[0m tag_specifications {
+          [31m-[0m[0m resource_type = "instance" [90m-> null[0m[0m
+          [31m-[0m[0m tags          = {
+              [31m-[0m[0m "Name" = "fck-nat-exp-1789090055-6"
+            } [90m-> null[0m[0m
+        }
+      [31m-[0m[0m tag_specifications {
+          [31m-[0m[0m resource_type = "network-interface" [90m-> null[0m[0m
+          [31m-[0m[0m tags          = {
+              [31m-[0m[0m "Name" = "fck-nat-exp-1789090055-6"
+            } [90m-> null[0m[0m
+        }
+      [31m-[0m[0m tag_specifications {
+          [31m-[0m[0m resource_type = "volume" [90m-> null[0m[0m
+          [31m-[0m[0m tags          = {
+              [31m-[0m[0m "Name" = "fck-nat-exp-1789090055-6"
+            } [90m-> null[0m[0m
+        }
+    }
+
+[1m  # module.fck_nat.aws_network_interface.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_network_interface" "main" {
+      [31m-[0m[0m arn                       = "arn:aws:ec2:us-west-2:711318977523:network-interface/eni-0835308fc9aeaeb37" [90m-> null[0m[0m
+      [31m-[0m[0m description               = "fck-nat-exp-1789090055-6 static private ENI" [90m-> null[0m[0m
+      [31m-[0m[0m id                        = "eni-0835308fc9aeaeb37" [90m-> null[0m[0m
+      [31m-[0m[0m interface_type            = "interface" [90m-> null[0m[0m
+      [31m-[0m[0m ipv4_prefix_count         = 0 [90m-> null[0m[0m
+      [31m-[0m[0m ipv4_prefixes             = [] [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_address_count        = 0 [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_address_list         = [] [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_address_list_enabled = false [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_addresses            = [] [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_prefix_count         = 0 [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_prefixes             = [] [90m-> null[0m[0m
+      [31m-[0m[0m mac_address               = "0a:ff:dd:78:f3:33" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                  = "711318977523" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_name          = "ip-10-99-1-224.us-west-2.compute.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip                = "10.99.1.224" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip_list           = [
+          [31m-[0m[0m "10.99.1.224",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m private_ip_list_enabled   = false [90m-> null[0m[0m
+      [31m-[0m[0m private_ips               = [
+          [31m-[0m[0m "10.99.1.224",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m private_ips_count         = 0 [90m-> null[0m[0m
+      [31m-[0m[0m region                    = "us-west-2" [90m-> null[0m[0m
+      [31m-[0m[0m security_groups           = [
+          [31m-[0m[0m "sg-09acbcdd1389aaeb3",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m source_dest_check         = false [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id                 = "subnet-09243b9701e480665" [90m-> null[0m[0m
+      [31m-[0m[0m tags                      = {
+          [31m-[0m[0m "Name" = "fck-nat-exp-1789090055-6"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                  = {
+          [31m-[0m[0m "Name" = "fck-nat-exp-1789090055-6"
+        } [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.fck_nat.aws_security_group.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "main" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-west-2:711318977523:security-group/sg-09acbcdd1389aaeb3" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Used in fck-nat-exp-1789090055-6 instance of fck-nat in subnet subnet-09243b9701e480665" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "Unrestricted egress"
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = [
+                  [31m-[0m[0m "::/0",
+                ]
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-09acbcdd1389aaeb3" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "10.99.0.0/16",
+                ]
+              [31m-[0m[0m description      = "Unrestricted ingress from within VPC"
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "fck-nat-exp-1789090055-6" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "711318977523" [90m-> null[0m[0m
+      [31m-[0m[0m region                 = "us-west-2" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {
+          [31m-[0m[0m "Name" = "fck-nat-exp-1789090055-6"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {
+          [31m-[0m[0m "Name" = "fck-nat-exp-1789090055-6"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-07edef14b92b9d6bf" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1mPlan:[0m [0m0 to add, 0 to change, 8 to destroy.
+[0m[1mmodule.fck_nat.aws_iam_role_policy_attachment.main: Destroying... [id=fck-nat-exp-1789090055-6/arn:aws:iam::711318977523:policy/fck-nat-exp-1789090055-6][0m[0m
+[0m[1mmodule.fck_nat.aws_autoscaling_group.main[0]: Destroying... [id=fck-nat-exp-1789090055-6][0m[0m
+[0m[1mmodule.fck_nat.aws_iam_role_policy_attachment.main: Destruction complete after 0s[0m
+[0m[1mmodule.fck_nat.aws_iam_policy.main: Destroying... [id=arn:aws:iam::711318977523:policy/fck-nat-exp-1789090055-6][0m[0m
+[0m[1mmodule.fck_nat.aws_iam_policy.main: Destruction complete after 0s[0m
+[0m[1mmodule.fck_nat.aws_autoscaling_group.main[0]: Still destroying... [id=fck-nat-exp-1789090055-6, 00m10s elapsed][0m[0m
+[0m[1mmodule.fck_nat.aws_autoscaling_group.main[0]: Still destroying... [id=fck-nat-exp-1789090055-6, 00m20s elapsed][0m[0m
+[0m[1mmodule.fck_nat.aws_autoscaling_group.main[0]: Still destroying... [id=fck-nat-exp-1789090055-6, 00m30s elapsed][0m[0m
+[0m[1mmodule.fck_nat.aws_autoscaling_group.main[0]: Still destroying... [id=fck-nat-exp-1789090055-6, 00m40s elapsed][0m[0m
+[0m[1mmodule.fck_nat.aws_autoscaling_group.main[0]: Still destroying... [id=fck-nat-exp-1789090055-6, 00m50s elapsed][0m[0m
+[0m[1mmodule.fck_nat.aws_autoscaling_group.main[0]: Still destroying... [id=fck-nat-exp-1789090055-6, 01m00s elapsed][0m[0m
+[0m[1mmodule.fck_nat.aws_autoscaling_group.main[0]: Destruction complete after 1m6s[0m
+[0m[1mmodule.fck_nat.aws_launch_template.main: Destroying... [id=lt-0a4ddb92fd5384510][0m[0m
+[0m[1mmodule.fck_nat.aws_launch_template.main: Destruction complete after 0s[0m
+[0m[1mmodule.fck_nat.aws_iam_instance_profile.main: Destroying... [id=fck-nat-exp-1789090055-6][0m[0m
+[0m[1mmodule.fck_nat.aws_network_interface.main: Destroying... [id=eni-0835308fc9aeaeb37][0m[0m
+[0m[1mmodule.fck_nat.aws_iam_instance_profile.main: Destruction complete after 1s[0m
+[0m[1mmodule.fck_nat.aws_iam_role.main: Destroying... [id=fck-nat-exp-1789090055-6][0m[0m
+[0m[1mmodule.fck_nat.aws_iam_role.main: Destruction complete after 0s[0m
+[0m[1mmodule.fck_nat.aws_network_interface.main: Destruction complete after 1s[0m
+[0m[1mmodule.fck_nat.aws_security_group.main: Destroying... [id=sg-09acbcdd1389aaeb3][0m[0m
+[0m[1mmodule.fck_nat.aws_security_group.main: Destruction complete after 1s[0m
+[33m╷[0m[0m
+[33m│[0m [0m[1m[33mWarning: [0m[0m[1mDeprecated attribute[0m
+[33m│[0m [0m
+[33m│[0m [0m[0m  on .terraform/modules/fck_nat/main.tf line 38, in resource "aws_security_group" "main":
+[33m│[0m [0m  38:     ipv6_cidr_blocks = var.use_nat64 ? ["${data.aws_vpc.main[4m.ipv6_cidr_block[0m}"] : null[0m
+[33m│[0m [0m
+[33m│[0m [0mThe attribute "ipv6_cidr_block" is deprecated. Refer to the provider
+[33m│[0m [0mdocumentation for details.
+[33m╵[0m[0m
+[0m[1m[32m
+Destroy complete! Resources: 8 destroyed.[0m

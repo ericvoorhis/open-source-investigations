@@ -1,0 +1,29 @@
+{
+    "Activities": [
+        {
+            "ActivityId": "35e681fb-102c-45b1-e9c0-099105a511aa",
+            "AutoScalingGroupName": "fck-nat-exp-1788833084-1",
+            "Description": "Launching a new EC2 instance: i-07c5f95a6a8dbb635",
+            "Cause": "At 2026-09-08T02:06:09Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 1.",
+            "StartTime": "2026-09-08T02:06:12.241000+00:00",
+            "EndTime": "2026-09-08T02:06:17+00:00",
+            "StatusCode": "Successful",
+            "Progress": 100,
+            "Details": "{\"Availability Zone ID\":\"usw2-az3\",\"Subnet ID\":\"subnet-027871e07237cb585\",\"Availability Zone\":\"us-west-2c\"}",
+            "AutoScalingGroupARN": "arn:aws:autoscaling:us-west-2:347179352735:autoScalingGroup:9a88aacd-471a-4387-86ee-b0dc4fbe9872:autoScalingGroupName/fck-nat-exp-1788833084-1"
+        },
+        {
+            "ActivityId": "212681fb-0c4d-9993-6460-73d150bf5d00",
+            "AutoScalingGroupName": "fck-nat-exp-1788833084-1",
+            "Description": "Launching a new EC2 instance.  Status Reason: Authentication Failure. Launching EC2 instance failed.",
+            "Cause": "At 2026-09-08T02:05:04Z a user request created an AutoScalingGroup changing the desired capacity from 0 to 1.  At 2026-09-08T02:05:08Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 1.",
+            "StartTime": "2026-09-08T02:05:08.838000+00:00",
+            "EndTime": "2026-09-08T02:05:08+00:00",
+            "StatusCode": "Failed",
+            "StatusMessage": "Authentication Failure. Launching EC2 instance failed.",
+            "Progress": 100,
+            "Details": "{\"Availability Zone ID\":\"usw2-az3\",\"Subnet ID\":\"subnet-027871e07237cb585\",\"Availability Zone\":\"us-west-2c\"}",
+            "AutoScalingGroupARN": "arn:aws:autoscaling:us-west-2:347179352735:autoScalingGroup:9a88aacd-471a-4387-86ee-b0dc4fbe9872:autoScalingGroupName/fck-nat-exp-1788833084-1"
+        }
+    ]
+}

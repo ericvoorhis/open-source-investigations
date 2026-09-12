@@ -1,0 +1,16 @@
+{
+    "Activities": [
+        {
+            "ActivityId": "063681f7-fac7-4f02-83f3-7249ad4db366",
+            "AutoScalingGroupName": "fcknat-exp-1788820216-8",
+            "Description": "Launching a new EC2 instance: i-0370699d6a54cddb7",
+            "Cause": "At 2026-09-07T22:30:35Z a user request created an AutoScalingGroup changing the desired capacity from 0 to 1.  At 2026-09-07T22:30:36Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 1.",
+            "StartTime": "2026-09-07T22:30:38.803000+00:00",
+            "EndTime": "2026-09-07T22:30:43+00:00",
+            "StatusCode": "Successful",
+            "Progress": 100,
+            "Details": "{\"Availability Zone ID\":\"usw2-az2\",\"Subnet ID\":\"subnet-07e17efbb16c21e31\",\"Availability Zone\":\"us-west-2b\"}",
+            "AutoScalingGroupARN": "arn:aws:autoscaling:us-west-2:474668390446:autoScalingGroup:9e56cda5-b09e-4662-9111-81c768c4ff73:autoScalingGroupName/fcknat-exp-1788820216-8"
+        }
+    ]
+}

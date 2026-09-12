@@ -1,0 +1,9 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+.DS_Store
+
+# .terraform.lock.hcl is deliberately NOT ignored: pinning provider versions is what makes a
+# reproduction reproducible for someone reading it months later.

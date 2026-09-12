@@ -1,0 +1,9 @@
+started_at        2026-09-07T22:17:53Z
+account_id        474668390446
+region            us-west-2
+trials            10
+slr_created_at    2026-08-13T20:24:58+00:00
+slr_role_id       AROAW5BDQ3AXE2FZSLO6F
+terraform         1.14.8
+aws_cli           aws-cli/2.17.11 Python/3.11.8 Darwin/24.6.0 exe/x86_64
+module            1.6.1
